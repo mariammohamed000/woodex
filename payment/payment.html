@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Payment</h1>
+        </div>
+        <div class="content">
+            <div class="tour-item">
+                <h2>3D Tour Item</h2>
+                <div class="tour-placeholder">
+                    <img src= "D:\web development\payment\image\product-6.jpg" alt="Helen Chair" class="tour-image">
+                    <p>Name: Helen Chair</p>
+                    <p>Description: Furniture</p>
+                    <p>Total Payment: $69.50</p>
+                </div>
+            </div>
+            <div class="payment-details">
+                <h2>Payment Details</h2>
+                <form id="payment-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" value="Helen Chair" readonly><br>
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" oninput="validity.valid||(value='');"><br>
+                    <label for="description">Description:</label>
+                    <input type="text" id="description" name="description" value="Furniture" readonly><br>
+                    <label for="total">Total Payment:</label>
+                    <input type="text" id="total" name="total" value="$69.50" readonly><br>
+                    <div class="button-style" id="pay-button">
+                        <div class="button-text">Pay via Visa</div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="woodex-logo">Woodex</div>
+
+    <div class="dark-mode-toggle">
+        <div class="button-style" onclick="toggleDarkMode()">
+            <div class="button-text">Dark Mode</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
