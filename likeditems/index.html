@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liked Items</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Woodex</div>
+        <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</button>
+    </header>
+    <main>
+        <div class="item-container">
+            <div class="item-card">
+                <div class="item-image">
+                    <img src="d:\web development\payment\image\product-6.jpg" alt="Product Image">
+                    <button class="like-button" onclick="toggleLike(this)">❤️</button>
+                </div>
+                <div class="item-details">
+                    <div class="item-name">Helen Chair</div>
+                    <div class="item-category">Furniture</div>
+                    <div class="add-to-cart">
+                        <a href="../shoppingcart/cart.html" style="text-decoration: none; color: #000;">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-card">
+                <div class="item-image">
+                    <img src="D:\web development\likeditems\images\product-4.jpg" alt="Product Image">
+                    <button class="like-button" onclick="toggleLike(this)">❤️</button>
+                </div>
+                <div class="item-details">
+                    <div class="item-name">Dark Green Jug</div>
+                    <div class="item-category">Accessory</div>
+                    <div class="add-to-cart">
+                        <a href="../shoppingcart/cart.html" style="text-decoration: none; color: #000;">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
