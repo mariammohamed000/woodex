@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="css/cart-styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">Woodex</div>
+      <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</button>
+    </header>
+    <main>
+      <div class="cart-container">
+        <% cart.forEach(cartItem => { %>
+        <div class="cart-item">
+          <div class="item-image">
+            <img
+              src="<%= cartItem.item.productPicture %>"
+              alt="<%= cartItem.item.name %> Image"
+            />
+          </div>
+          <div class="item-details">
+            <div class="item-info">
+              <div class="item-name"><%= cartItem.item.name %></div>
+            </div>
+            <div class="item-category"><%= cartItem.item.category %></div>
+          </div>
+        </div>
+        <% }); %>
+      </div>
+      <a
+        href="/payment?user=<%= user._id %>"
+        class="pay-button"
+        style="text-decoration: none"
+        >Pay</a
+      >
+    </main>
+    <script src="js/cartscripts.js"></script>
+  </body>
+</html>

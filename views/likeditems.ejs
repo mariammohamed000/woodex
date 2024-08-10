@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liked Items</title>
+    <link rel="stylesheet" href="css/likeditemsstyles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">Woodex</div>
+      <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</button>
+    </header>
+    <main>
+      <div class="item-container">
+        <% products.forEach(product => { %>
+        <div class="item-card">
+          <div class="item-image">
+            <img
+              src="<%= product.productPicture %>"
+              alt="<%= product.name %> Image"
+              style="height: 200px"
+            />
+            <button
+              class="like-button"
+              onclick="toggleLike(this,'<%= user._id %>', '<%= product._id %>' )"
+            >
+              ❤️
+            </button>
+          </div>
+          <div class="item-details">
+            <div class="item-name"><%= product.name %></div>
+            <div class="item-category"><%= product.category %></div>
+            <div class="add-to-cart">
+              <a
+                href="/cart?user=<%= user._id %>"
+                style="text-decoration: none; color: #000"
+                onclick="addToCart('<%= user._id %>', '<%= product._id %>')"
+              >
+                Add to Cart
+              </a>
+            </div>
+          </div>
+        </div>
+        <% }); %>
+      </div>
+    </main>
+    <script src="js/likeditemsscript.js"></script>
+  </body>
+</html>
