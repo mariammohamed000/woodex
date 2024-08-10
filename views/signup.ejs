@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Sign Up</title>
+    <link rel="stylesheet" href="css/signupstyles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div
+        style="color: white; background-color: red; width: auto; height: auto"
+      >
+        <%=error%>
+      </div>
+      <div class="logo">Woodex</div>
+      <div class="title">User Sign Up</div>
+
+      <form
+        id="signup-form"
+        method="POST"
+        action="/signup"
+        enctype="multipart/form-data"
+      >
+        <div class="input-label">Email</div>
+        <input type="text" class="input-field" name="email" required />
+
+        <div class="name-label">Name</div>
+        <input type="text" class="name-field" name="name" required />
+
+        <div class="password-label">Password</div>
+        <input
+          type="password"
+          class="password-field"
+          name="password"
+          required
+        />
+
+        <div class="confirmpassword-label">Confirm Password</div>
+        <input
+          type="password"
+          class="confirmpassword-field"
+          name="confirmPassword"
+          required
+        />
+
+        <div class="mobile-label">Mobile Number</div>
+        <input type="text" class="mobile-field" name="mobile" required />
+
+        <div class="address-label">Address</div>
+        <textarea class="address-field" name="address" required></textarea>
+
+        <div class="picture-label">Upload Picture</div>
+        <input type="file" class="picture-field" name="profilePicture" />
+
+        <button type="submit" class="signup-button">
+          <div class="signup-button-text">Sign up</div>
+        </button>
+      </form>
+
+      <button class="mode-toggle-button" onclick="toggleDarkMode()">
+        Toggle Dark Mode
+      </button>
+    </div>
+
+    <script src="/js/signupscript.js"></script>
+  </body>
+</html>

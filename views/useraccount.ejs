@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Account</title>
+    <link rel="stylesheet" href="css/useraccountstyles.css" />
+    <!-- Include Ionicons -->
+    <script
+      src="https://unpkg.com/ionicons/dist/ionicons/ionicons.esm.js"
+      type="module"
+    ></script>
+    <script src="https://unpkg.com/ionicons/dist/ionicons/ionicons.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">Woodex</div>
+      <nav>
+        <a href="/homepage" class="header-action-btn" aria-label="home">
+          <ion-icon name="home-outline" aria-hidden="true"></ion-icon>
+        </a>
+        
+        <a href="/logout" class="header-action-btn" aria-label="log out">
+          <ion-icon name="log-out-outline" aria-hidden="true"></ion-icon>
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="profile-section">
+        <div class="profile-picture">
+          <img src="<%= user.profilePicture %>" alt="Profile Picture" />
+        </div>
+        <div class="profile-details">
+          <div class="name"><span>Name:</span><%=user.name %></div> <br />
+          <span>Email:</span> <%=user.email %></p>
+          <span>Mobile:</span><%=user.mobile %></p>
+          <span>Address:</span><%=user.address %></p>
+        </div>
+      </div>
+
+      <section id="order-list">
+        <h2>Order history</h2>
+        <% orders.forEach(order => { %>
+        <div class="order-item">
+          <img
+            src="<%= order.productPicture %>"
+            alt="<%= order.name %> Image"
+          />
+          <div class="order-details">
+            <p><%= order.name %></p>
+          </div>
+        </div>
+        <% }); %>
+      </section>
+
+      <button id="dark-mode-toggle">Toggle Dark Mode</button>
+    </main>
+
+    <script src="js/useraccountscript.js"></script>
+  </body>
+</html>
