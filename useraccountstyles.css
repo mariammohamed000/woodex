@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: var(--background-color, white); 
+    color: var(--text-color, black); 
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: var(--header-background, #f8f8f8);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-color, black);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.header-action-btn {
+    background: none;
+    border: none;
+    margin-left: 20px;
+    font-size: 24px;
+    color: var(--text-color, black);
+    cursor: pointer;
+    position: relative;
+}
+
+.header-action-btn .btn-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+}
+
+main {
+    padding: 20px;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-picture img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.profile-details {
+    font-size: 18px;
+}
+
+#order-list {
+    margin-top: 20px;
+}
+
+.order-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.order-item img {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+}
+
+.order-details p {
+    margin: 0;
+}
+
+#dark-mode-toggle {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: var(--button-background, #000);
+    color: var(--button-text-color, #fff);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+body.dark-mode {
+    --background-color: #1a1a1a;
+    --text-color: white;
+    --header-background: #333;
+    --button-background: #fff;
+    --button-text-color: #000;
+}
