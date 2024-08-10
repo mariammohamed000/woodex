@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Sign In</title>
+    <link rel="stylesheet" href="css/adminsignin.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">Woodex</div>
+      <div
+        style="color: white; background-color: red; width: auto; height: auto"
+      >
+        <%=error%>
+      </div>
+      <div class="title">Admin Sign In</div>
+      <form action="/adminsignin" method="POST">
+        <div class="input-label">Username</div>
+        <input type="text" class="input-field" name="email" required />
+        <div class="password-label">Password</div>
+        <input
+          type="password"
+          class="password-field"
+          name="password"
+          required
+        />
+        <button type="submit" class="signin-button">
+          <div class="signin-button-text">Sign in</div>
+        </button>
+      </form>
+      <button class="mode-toggle-button" onclick="toggleDarkMode()">
+        Toggle Dark Mode
+      </button>
+    </div>
+    <script src="js/adminsignin.js"></script>
+  </body>
+</html>

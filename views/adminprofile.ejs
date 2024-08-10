@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Profile</title>
+    <link rel="stylesheet" href="css/adminprofile.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">Woodex</div>
+      <div class="profile-picture">
+        <img src="<%= user.profilePicture %>" alt="Profile Picture" />
+      </div>
+      <div class="profile-details">
+        <div class="name"><%= user.name %></div>
+        <div class="role">Admin</div>
+        <div class="contact-info">
+          <span>Username:</span> <%= user.email %><br />
+          <span>Phone:</span> <%= user.mobile %><br />
+          <span>address:</span> <%= user.address %>
+
+        </div>
+      </div>
+      <div class="action-buttons">
+        <div class="button">
+          <a href="/viewprod" class="button-link">View Product</a>
+        </div>
+      </div>
+    </div>
+    <button class="mode-toggle-button" onclick="toggleDarkMode()">
+      Dark Mode
+    </button>
+    <script src="js/adminprofile.js"></script>
+  </body>
+</html>
