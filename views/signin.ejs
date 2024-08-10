@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Sign In</title>
+    <link rel="stylesheet" href="css/signinstyles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div
+        style="color: white; background-color: red; width: auto; height: auto"
+      >
+        <%=error%>
+      </div>
+      <div class="logo">Woodex</div>
+      <div class="title">User Sign In</div>
+      <form action="/signin" method="POST">
+        <div class="input-label">Email</div>
+        <input type="text" class="input-field" name="email" />
+        <div class="password-label">Password</div>
+        <input type="password" class="password-field" name="password" />
+        <button
+          type="submit"
+          class="signin-button"
+          style="text-decoration: none"
+        >
+          <div class="signin-button-text">Sign in</div>
+        </button>
+
+        <a href="/forgotpassword" class="forgot-password">Forgot Password?</a>
+      </form>
+
+      <button class="mode-toggle-button" onclick="toggleDarkMode()">
+        Toggle Dark Mode
+      </button>
+    </div>
+    <script src="js/signinscript.js"></script>
+  </body>
+</html>
