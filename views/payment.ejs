@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="css/paymentstyles.css" />
+  </head>
+  <body>
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+    <div class="container">
+      <div class="header">
+        <h1>Payment</h1>
+      </div>
+      <div class="content">
+        <div class="tour-item">
+          <h2>3D Item</h2>
+          <div class="tour-placeholder" style="height: 600px">
+            <model-viewer
+              src="images/dylan_armchair_yolk_yellow.glb"
+              class="tour-item"
+              camera-controls
+            />
+            <p>Name: yellow Chair</p>
+            <p>Description: Furniture</p>
+          </div>
+        </div>
+        <div class="payment-details">
+          <h2>Payment Details</h2>
+          <form id="payment-form">
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value="<%= user.name %>"
+              readonly
+            /><br />
+            <label for="quantity">Email:</label>
+            <input
+              type="text"
+              id="quantity"
+              name="quantity"
+              value="<%= user.email %>"
+              readonly
+            /><br />
+            <label for="description">Phone:</label>
+            <input
+              type="text"
+              id="description"
+              name="description"
+              value="<%= user.mobile %>"
+              readonly
+            /><br />
+            <label for="total">Total Payment:</label>
+            <input
+              type="text"
+              id="total"
+              name="total"
+              value="$69.50"
+              readonly
+            /><br />
+            <div class="button-style" id="pay-button">
+              <a href="/checkout?user=<%= user._id %>" class="button-text"
+                >Pay via Visa</a
+              >
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="woodex-logo">Woodex</div>
+
+    <div class="dark-mode-toggle">
+      <div class="button-style" onclick="toggleDarkMode()">
+        <div class="button-text">Dark Mode</div>
+      </div>
+    </div>
+
+    <script src="js/paymentscript.js"></script>
+  </body>
+</html>
